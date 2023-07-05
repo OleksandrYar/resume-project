@@ -1,0 +1,91 @@
+<div>
+  <header>
+    <h1>Facebook<span
+        class='badge bg-secondary'
+      >Users</span></h1>
+  </header>
+  <main>
+    <section>
+        {{#each users}}
+        <ul class="list-group">
+        <li class="list-group-item active" aria-current="true">
+          <strong>{{name}}</strong>
+          {{#if id includeZero=true}} ({{id}}) {{/if}}
+          {{gender}}
+          <br>
+          {{age}}
+        </li>
+        </ul>
+        <div>
+          <h6>Friendslist:<span class="badge bg-secondary"></span></h6>
+          {{#each friends}}
+          <ul class="list-group">
+        <li>
+          <strong>{{name}}</strong>
+          {{#if id includeZero=true}} ({{id}}) {{/if}}
+          {{gender}}
+          <br>
+          {{age}}
+        </li>
+        </ul>
+        </div>
+        <br>
+        <div>
+        <h6>Mutual friends:<span class="badge bg-secondary"></span></h6>
+        {{#each mutual_friends}}
+        <ul>
+        <li>
+          <span class="badge text-bg-info">{{name}} {{#if id includeZero=true}} ({{id}}) {{/if}}</span>
+          {{gender}}
+          <br>
+          {{age}}
+        </li>
+        </ul>
+        {{/each}}
+        <section>
+          <div>
+            {{#each groups}}
+            <ul class="list-group">
+              <li class="list-group-item">
+                <span class="badge text-bg-info">{{name}} {{#if id includeZero=true}} ({{id}}) {{/if}}</span>
+                <em><p>{{description}}</p></em>
+                <br>
+                <b>Members:</b>
+                {{#each members}}
+                <span class="badge text-bg-success">
+                  {{name}} {{#if id includeZero=true}} ({{id}}) {{/if}}
+                </span>
+                ({{gender}} {{age}})
+                {{/each}}
+              </li>
+              </ul>
+            {{/each}}
+          </div>
+        </section>
+        {{/each}}
+        <hr>
+        </div>
+        <section>
+          <div>
+            {{#each groups}}
+            <ul class="list-group">
+              <li class="list-group-item">
+                <span class="badge text-bg-info">{{name}} {{#if id includeZero=true}} ({{id}}) {{/if}}</span>
+                <em><p>{{description}}</p></em>
+                <br>
+                <b>Members:</b>
+                {{#each members}}
+                <span class="badge text-bg-success">
+                  {{name}} {{#if id includeZero=true}} ({{id}}) {{/if}}
+                </span>
+                ({{gender}} {{age}})
+                {{/each}}
+              </li>
+              </ul>
+            {{/each}}
+          </div>
+        </section>
+        {{/each}}
+    </section>
+  </main>
+</div>
