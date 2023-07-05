@@ -41,16 +41,11 @@
           {{age}}
         </li>
         </ul>
-        
         {{/each}}
-        {{/each}}
-        <hr>
-        </div>
         <section>
           <div>
-            <h6>Groups<span class="badge bg-secondary"></span></h6>
             {{#each groups}}
-            <ol class="list-group list-group-numbered">
+            <ul class="list-group">
               <li class="list-group-item">
                 <span class="badge text-bg-info">{{name}} {{#if id includeZero=true}} ({{id}}) {{/if}}</span>
                 <em><p>{{description}}</p></em>
@@ -63,7 +58,30 @@
                 ({{gender}} {{age}})
                 {{/each}}
               </li>
-              </ol>
+              </ul>
+            {{/each}}
+          </div>
+        </section>
+        {{/each}}
+        <hr>
+        </div>
+        <section>
+          <div>
+            {{#each groups}}
+            <ul class="list-group">
+              <li class="list-group-item">
+                <span class="badge text-bg-info">{{name}} {{#if id includeZero=true}} ({{id}}) {{/if}}</span>
+                <em><p>{{description}}</p></em>
+                <br>
+                <b>Members:</b>
+                {{#each members}}
+                <span class="badge text-bg-success">
+                  {{name}} {{#if id includeZero=true}} ({{id}}) {{/if}}
+                </span>
+                ({{gender}} {{age}})
+                {{/each}}
+              </li>
+              </ul>
             {{/each}}
           </div>
         </section>
