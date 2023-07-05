@@ -1,0 +1,171 @@
+<div>
+    <header>
+        {{>title data='Javascript' big=true}}
+        <p>
+            {{description}}
+        </p>
+        {{#with history}}
+        <div>
+            <em>
+                {{year}}
+                <br>
+                {{founder}}
+            </em>
+        </div>
+        {{/with}}
+    </header>
+    <hr>
+    <main>
+        <div>
+            <h4><span class="badge bg-secondary">Types</span></h4>
+            <ul>
+                <li>
+                    <span class="badge text-bg-primary">
+                        <b>{{types}}</b>
+                    </span>
+                </li>
+            </ul>
+            <h4><span class="badge bg-secondary">Syntax</span></h4>
+            <ul>
+                <li>
+                    <span class="badge text-bg-primary">
+                        <b>
+                            {{#with syntax}}
+                            {{variables}}
+                            <br>
+                            {{functions}}
+                            <br>
+                            {{conditionals}}
+                            <br>
+                            {{loops}}
+                            <br>
+                            {{classes}}
+                            {{/with}}
+                        </b>
+                    </span>
+                </li>
+            </ul>
+            <h4><span class="badge bg-secondary">Features</span></h4>
+            <ul>
+                <li>
+                    <span class="badge text-bg-primary">
+                        <b>
+                            {{features}}
+                        </b>
+                    </span>
+                </li>
+            </ul>
+
+            <h4><span class="badge bg-secondary">Libraries</span></h4>
+            <ul>
+                <li>
+                    <span class="badge text-bg-primary">
+                        <b>
+                            {{libraries}}
+                        </b>
+                    </span>
+                </li>
+            </ul>
+            <h4><span class="badge bg-secondary">Tools</span></h4>
+            <ul>
+                <li>
+                    <span class="badge text-bg-primary">
+                        <b>
+                            {{tools}}
+                        </b>
+                    </span>
+                </li>
+            </ul>
+            <hr>
+        </div>
+    </main>
+    <footer>
+        {{>title data='Community'}}
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Stack Overflow
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <a class="icon-link" href="#">
+                            Stack Overflow
+                            <svg class="bi" aria-hidden="true">
+                                <use xlink:href="#arrow-right"></use>
+                            </svg>
+                        </a>
+                        <b>Forum</b>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            JavaScript Weekly
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <a class="icon-link" href="#">
+                                JavaScript Weekly
+                                <svg class="bi" aria-hidden="true">
+                                    <use xlink:href="#arrow-right"></use>
+                                </svg>
+                            </a>
+                            <b>Newsletter</b>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                                The Changelog
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <a class="icon-link" href="#">
+                                    The Changelog
+                                    <svg class="bi" aria-hidden="true">
+                                        <use xlink:href="#arrow-right"></use>
+                                    </svg>
+                                </a>
+                                <b>Podcast</b>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                    aria-controls="flush-collapseOne">
+                                    CSS-Tricks
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <a class="icon-link" href="#">
+                                        CSS-Tricks
+                                        <svg class="bi" aria-hidden="true">
+                                            <use xlink:href="#arrow-right"></use>
+                                        </svg>
+                                    </a>
+                                    <b>Blog</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    </footer>
+</div>
