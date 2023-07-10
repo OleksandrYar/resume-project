@@ -5,8 +5,8 @@
     {{>link text=linkedin.text href=linkedin.href blank=true noLine=true}}
     {{/with}}
 </div>
-<br>
-<div>
+
+<div class="my-3">
     {{#with firstname}}
     <em>
         Copyright by {{../header.name.firstname}}
@@ -14,7 +14,7 @@
     {{/with}}
     {{#with lastname}}<em>{{../header.name.lastname}}</em>{{/with}}
 </div>
-<br>
+
 <div>
     {{#with adress}}
     {{../header/adress}}
