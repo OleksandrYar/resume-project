@@ -46,21 +46,9 @@
         <div class="col-2">
             <div class="nav nav-tabs">
                 <div class="nav-item">
-                    {{#if isActive isActive=true}}
-                    <a href="#" class="nav-link active">
+                    <a href="#" class="nav-link {{#if isActive}}active{{/if}}  {{#if isDisabled}}disabled{{/if}}">
                         {{text}}
                     </a>
-                    {{/if}}
-                    {{#if isDisabled isDisabled=false}}
-                    <a href="#" class="nav-link">
-                        {{text}}
-                    </a>
-                    {{/if}}
-                    {{#unless isDisabled}}
-                    <a href="#" class="nav-link disabled">
-                        {{text}}
-                    </a>
-                    {{/unless}}
                 </div>
             </div>
         </div>
@@ -121,17 +109,13 @@
     </div>
     {{/with}}
     <hr class="mb-5">
-    {{#each footer}}
-    <div class="row">
-        <div class="col-2">
-            <div class="nav">
-                <div class="nav-item">
-                    <a href="{{link}}" class="btn nav-link">{{text}}</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-
-    {{/each}}
+<div class="nav">
+   {{#each footer}}
+      <div class="nav-item">
+         {{#each this}}
+           <a class="nav-link" href="{{link}}">{{text}}<a>
+         {{/each}}
+     </div>
+   {{/each}}
+</div>
 </main>
