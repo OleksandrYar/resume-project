@@ -1,0 +1,30 @@
+{{#each purchase.itemList}}
+<div class="card mt-3 me-5">
+    <div class="row">
+        <div class="col-4 mt-2">
+            <h5 class="card-title">{{number}}</h5>
+            <p class="card-text"><b>{{status}}</b></p>
+        </div>
+        <div class="col-2">
+            <p class="card-text text-center mt-4">
+                {{#with amount}}
+                {{title}}: <b>{{value}}</b>
+                {{/with}}
+            </p>
+        </div>
+        {{#each images}}
+        <div class="col-auto">
+            <img src="{{this}}" class="img-fluid rounded-start">
+        </div>
+        {{/each}}
+         <div class="col-2">
+            {{#with button}}
+            <a class="btn 
+                {{#if isPrimary}}btn-primary text-center mt-4{{/if}}" href="{{link}}">
+                {{text}}
+            </a>
+            {{/with}}
+        </div>
+    </div>
+</div>
+{{/each}}
