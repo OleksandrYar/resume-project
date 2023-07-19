@@ -96,56 +96,7 @@
         {{/with}}
     </div>
     <hr class="mb-5 mt-5">
-    <div class="row">
-        {{#each reviewList}}
-        <div class="card p-3 mb-5">
-            <div class="card">
-                <ul class="list-group list-group-flush mb-5">
-                    {{#with title}}
-                    <li class="list-group-item">
-                        <b>{{userName}}</b>
-                        <p>{{caption}}</p>
-                        <div class="text-muted">{{date}}</div>
-                    </li>
-                    {{/with}}
-                    {{#with reviewBody}}
-                    <li class="list-group-item">
-                        {{#with seller}}
-                        <p class="mb-4">{{title}} : {{value}}</p>
-                        {{/with}}
-                        {{#with rating}}
-                        <p class="mb-4">{{title}} : {{value}}</p>
-                        {{/with}}
-                        {{#each text}}
-                        <p class="mb-4">{{this}}</p>
-                        {{/each}}
-                        {{#with advantages}}
-                        <p class="mb-4"><b>{{title}}</b> :<br> {{text}}</p>
-                        {{/with}}
-                        {{#with disadvantages}}
-                        <p class="mb-4"><b>{{title}}</b> :<br> {{text}}</p>
-                        {{/with}}
-                        {{#each images}}
-                        <img src="{{this}}" class="me-2">
-                        {{/each}}
-                    </li>
-                </ul>
-            </div>
-            {{#each coments}}
-            <div class="mt-4 mb-4">
-                <div class="card ms-5">
-                    <div class="card-body">
-                        <p class="text-lg"><b>{{userName}}</b></p>
-                        <p class="text-muted">{{date}}</p>
-                        <p class="text-sm">{{text}}</p>
-                    </div>
-                </div>
-            </div>
-            {{/each}}
-            {{/with}}
-        </div>
-        {{/each}}
-    </div>
+   {{> reviewitem}}
     {{#with service}}
     <div class="card">
         <div class="card-body text-center text-bg-success">
