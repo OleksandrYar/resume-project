@@ -1,0 +1,131 @@
+<main class="ps-3">
+    {{#with navigation}}
+    <div class="row">
+        {{#each links}}
+        <div class="col-auto">
+            <div class="nav">
+                <div class="nav-item">
+                    <a href="{{href}}" class="nav-link active">{{text}}</a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+        <div class="col-2 mt-2">
+            <div class="nav-item">
+                <a href="#" class="nav-link disabled">Disabled</a>
+            </div>
+        </div>
+    </div>
+    {{/with}}
+    <div class="row mt-5">
+        <div class="col-auto">
+            <ol class="breadcrumb">
+                {{#each breadcrumb}}
+                <li class="breadcrumb-item"><a href="{{url}}">{{name}}</a></li>
+                {{/each}}
+            </ol>
+        </div>
+    </div>
+    <div class="h1 mt-4">{{header}}</div>
+    <div class="row">
+        {{#each sortBlock}}
+        <div class="col-3">
+            <div class="form-floating mb-5">
+                <select class="form-select-sm col-8" id="floatingSelect">
+                    <option selected>{{placeholder}}</option>
+                    {{#each options}}
+                    <option value="{{value}}">{{text}}</option>
+                    {{/each}}
+                </select>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <div class="card">
+                <div class="card-body">
+                    {{#with filterBlock}}
+                    {{#with sellers}}
+                    <p>{{title}}</p>
+                    {{#each list}}
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">
+                            {{value}}
+                        </label>
+                    </div>
+                    {{/each}}
+                    {{/with}}
+                    <hr class="m-3">
+                    {{#with brands}}
+                    <p>{{title}}</p>
+                    {{#with input}}
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2 mb-2 text-muted" type="search" placeholder="{{placeholder}}"
+                            aria-label="Search">
+                    </form>
+                    {{/with}}
+                    {{#each options}}
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">
+                            {{value}}
+                        </label>
+                    </div>
+                    {{/each}}
+                    {{/with}}
+                    <hr class="m-3">
+                    {{#with price}}
+                    <p>{{title}}</p>
+                    {{#with range}}
+                    <input class="form-control mb-2 text-muted" list="datalistOptions" id="exampleDataList"
+                        placeholder="{{from}}">
+                    <input class="form-control text-muted" list="datalistOptions" id="exampleDataList"
+                        placeholder="{{to}}">
+                    {{/with}}
+                    {{#with button}}
+                    <a class="btn btn-outline-secondary mt-2">{{text}}</a>
+                    {{/with}}
+                    {{/with}}
+                    <hr class="m-3">
+                    {{#each filterList}}
+                    <hr class="m-3">
+                    <p>{{title}}</p>
+                    {{#each options}}
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">
+                            {{value}}
+                        </label>
+                    </div>
+                    {{/each}}
+                    {{/each}}
+                    {{/with}}
+                </div>
+            </div>
+        </div>
+        {{> catalogitem}}
+    </div>
+    {{#with service}}
+    <div class="card mt-5">
+        <div class="card-body text-center text-bg-success">
+            <div class="h2">{{title}}</div>
+            <p>{{description}}</p>
+            {{#each buttons}}
+            <a class="btn btn-primary" href="{{link}}">{{text}}</a>
+            {{/each}}
+        </div>
+    </div>
+    {{/with}}
+    <hr class="mt-5">
+    <div class="nav">
+        {{#each footer}}
+        <div class="nav-item">
+            {{#each this}}
+            <a class="{{#if @last}}disabled{{/if}} nav-link" href="{{link}}">{{text}}<a>
+                    {{/each}}
+        </div>
+        {{/each}}
+    </div>
+</main>

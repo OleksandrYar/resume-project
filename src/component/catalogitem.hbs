@@ -1,0 +1,46 @@
+<div class="col-8">
+            <div class="row">
+                {{#each goodsList}}
+                <div class="col-6">
+                    <div class="card mb-4">
+                        <img src="{{img}}" class="card-img-top" alt="Laptop">
+                        <div class="card-body">
+                            <span class="badge {{#if isHot}} text-bg-warning{{/if}} rounded-pill col-4">
+                                HOT!
+                            </span>
+                            <span class="badge {{#if isNew}} text-bg-primary{{/if}} rounded-pill col-4">
+                                Нове
+                            </span>
+                            <span class="badge {{#if isFast}} text-bg-success{{/if}} col-8 mt-3">
+                                Швидка доставка
+                            </span>
+                            <span class="badge {{#if isFree}} text-bg-secondary{{/if}} col-8">
+                                Безкоштовна доставка
+                            </span>
+                            <h5 class="card-title">{{name}}</h5>
+                            {{#with review}}
+                            <div class="text-muted mb-3">
+                                {{amount}} {{text}}
+                            </div>
+                            {{/with}}
+                            <div class="h4">{{price}}</div>
+                            <div class="text-muted mb-3">
+                                {{delivery}}
+                            </div>
+                            {{#each buttons}}
+                            <a class="btn {{#if isPrimary}}btn-primary{{/if}}{{#if isSecondary}}btn-secondary{{/if}} col-6 mb-2"
+                                href="{{link}}">{{text}}</a>
+                            {{/each}}
+                            {{#each characteristics}}
+                            <ul>
+                                <li class="text-sm">
+                                    {{title}} : {{value}}
+                                </li>
+                            </ul>
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
