@@ -1,4 +1,4 @@
-<div>
+<div class="col-6">
     {{#with social}}
     {{>link text=email.text href=email.href blank=true }}
     {{>link text=phone.text href=phone.href blank=true }}
@@ -6,17 +6,18 @@
     {{/with}}
 </div>
 
-<div class="my-3">
-    {{#with firstname}}
-    <em>
-        Copyright by {{../header.name.firstname}}
-    </em>
-    {{/with}}
-    {{#with lastname}}<em>{{../header.name.lastname}}</em>{{/with}}
-</div>
-
-<div>
-    {{#with adress}}
-    {{../header/adress}}
-    {{/with}}
+<div class="row my-3">
+    <div class="col-6">
+        {{#with firstname}}
+        <p class="fst-italic mb-2">
+            Copyright by {{../header.name.firstname}}
+        </p>
+        {{/with}}
+        {{#with lastname}}<em>{{../header.name.lastname}}</em>{{/with}}
+    </div>
+    <div>
+        {{#with adress}}
+        {{../header/adress}}
+        {{/with}}
+    </div>
 </div>
