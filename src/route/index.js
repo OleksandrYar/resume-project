@@ -34,11 +34,106 @@ var footer = {
 // router.get Створює нам один ентпоїнт
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
-router.get('/', function (req, res) {
+router.get('/index', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
+  res.render('index', {
+    layout: "index",
+    page: { title: 'Resume project' },
+    pageList: {
+      title: 'Page list',
+      text: 'This is my Resume project with some pages which i created during studying',
+      navigation: {
+        links: [
+          {
+            text: 'Summary',
+            href: 'http://localhost:3000/summary',
+          },
+          {
+            text: 'Education',
+            href: 'http://localhost:3000/education',
+          },
+          {
+            text: 'Skills',
+            href: 'http://localhost:3000/skills',
+          },
+          {
+            text: 'Work',
+            href: 'http://localhost:3000/work',
+          },
+          {
+            text: 'Car',
+            href: 'http://localhost:3000/car',
+          },
+          {
+            text: 'Facebook',
+            href: 'http://localhost:3000/facebook',
+          },
+          {
+            text: 'Js',
+            href: 'http://localhost:3000/js',
+          },
+          {
+            text: 'Mac',
+            href: 'http://localhost:3000/mac',
+          },
+          {
+            text: 'Person',
+            href: 'http://localhost:3000/person',
+          },
+          {
+            text: 'Program',
+            href: 'http://localhost:3000/program',
+          },
+          {
+            text: 'Web',
+            href: 'http://localhost:3000/web',
+          },
+          {
+            text: 'Bio',
+            href: 'http://localhost:3000/bio',
+          },
+          {
+            text: 'Task21',
+            href: 'http://localhost:3000/task21',
+          },
+          {
+            text: 'Task22',
+            href: 'http://localhost:3000/task22',
+          },
+          {
+            text: 'Task31',
+            href: 'http://localhost:3000/task31',
+          },
+          {
+            text: 'Shophome',
+            href: 'http://localhost:3000/shophome',
+          },
+          {
+            text: 'Shopcart',
+            href: 'http://localhost:3000/shopcart',
+          },
+          {
+            text: 'Shoporder',
+            href: 'http://localhost:3000/shoporder',
+          },
+          {
+            text: 'Shopprofile',
+            href: 'http://localhost:3000/shopprofile',
+          },
+          {
+            text: 'Shopreview',
+            href: 'http://localhost:3000/shopreview',
+          },
+          {
+            text: 'Shopcatalog',
+            href: 'http://localhost:3000/shopcatalog',
+          },
+        ],
+      },
+    },
+  })
   //                  ↑↑ сюди вводимо JSON дані
 })
 
